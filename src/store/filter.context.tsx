@@ -48,6 +48,7 @@ export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
 
     const addItem = (newItem: movieInfo) => {
         const updatedData = [...data, newItem]
+        // @ts-ignore
         setData(updatedData)
         localStorage.setItem("data", JSON.stringify(updatedData))
     }
