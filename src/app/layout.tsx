@@ -1,6 +1,9 @@
+"use client"
+import { UserDataContextProvider } from '@/store/movie.context'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { DataContextProvider } from '@/store/filter.context'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <UserDataContextProvider>
+          <DataContextProvider>
+            {children}
+          </DataContextProvider>
+        </UserDataContextProvider>
+      </body>
     </html>
   )
 }
