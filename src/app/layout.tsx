@@ -2,7 +2,7 @@
 import { UserDataContextProvider } from '@/store/movie.context'
 import './globals.css'
 import { DataContextProvider } from '@/store/filter.context'
-
+import Navbar from '@/layouts/navbar'
 
 export default function RootLayout({
   children,
@@ -14,7 +14,10 @@ export default function RootLayout({
       <body>
         <UserDataContextProvider>
           <DataContextProvider>
-            {children}
+            <main className='flex flex-col'>
+              <Navbar />
+              {children}
+            </main>
           </DataContextProvider>
         </UserDataContextProvider>
       </body>

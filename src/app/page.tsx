@@ -1,8 +1,6 @@
 "use client"
 import React from 'react';
 import MovieList from '@/layouts/movieList';
-import { movies } from '@/libs/data';
-import Navbar from '@/layouts/navbar';
 import FiltersNavBar from '@/layouts/filters';
 import { useDataContext } from '@/store/filter.context';
 
@@ -20,7 +18,6 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar />
       <FiltersNavBar />
       <MovieList movieList={ratingFiltered} />
     </div>

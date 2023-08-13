@@ -1,4 +1,5 @@
 "use client"
+import Button from '@/components/UI/button';
 import { geners, rating, yearOfRelease } from '@/libs/constants'
 import { FilterActionKind, useDataContext } from '@/store/filter.context';
 import React from 'react'
@@ -71,6 +72,7 @@ const FiltersNavBar = () => {
                     </option>
                 ))}
             </select>
+            <Button>Add a movie</Button>
         </div>
     )
 }

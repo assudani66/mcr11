@@ -2,11 +2,11 @@ interface movieInfo {
   id: number;
   title: string;
   year: number;
-  genre: string[];
+  genre: string[] | string;
   rating: number;
   director: string;
   writer: string;
-  cast: string[];
+  cast: string[] | string;
   summary: string;
   imageURL: string;
 }
