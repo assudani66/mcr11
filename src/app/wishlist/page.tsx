@@ -1,9 +1,18 @@
+"use client"
+import MovieList from '@/layouts/movieList'
+import { useDataContext } from '@/store/filter.context'
+import { useUserDetailsContext } from '@/store/movie.context'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
+    const { state } = useUserDetailsContext()
+    const { data } = useDataContext()
+
+    const wishlistedMovies = data.filter((movie) => state.wishList.includes(movie.id))
+
     return (
-        <div>page</div>
+        <MovieList movieList={wishlistedMovies} />
     )
 }
 
-export default page
+export default Page
