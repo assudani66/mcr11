@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import MovieList from '@/layouts/movieList';
 import FiltersNavBar from '@/layouts/filters';
