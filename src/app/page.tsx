@@ -1,4 +1,3 @@
-"use client"
 import React from 'react';
 import MovieList from '@/layouts/movieList';
 import FiltersNavBar from '@/layouts/filters';
@@ -19,6 +18,7 @@ export default function Home() {
   return (
     <div>
       <FiltersNavBar />
+      {/* @ts-ignore */}
       <MovieList movieList={ratingFiltered} />
     </div>
   );
